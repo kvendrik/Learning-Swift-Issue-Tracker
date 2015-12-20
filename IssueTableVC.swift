@@ -15,6 +15,8 @@ class IssueTableVC: UITableViewController {
     var refreshRC:UIRefreshControl!
     var issueItems: [IssueItem] = []
     
+    var repoFullName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +32,7 @@ class IssueTableVC: UITableViewController {
         loadingAIV.startAnimating()
         getData() {
             self.loadingAIV.stopAnimating()
+            self.loadingAIV.hidden = true
         }
         
         initPullToRefresh()
@@ -53,22 +56,35 @@ class IssueTableVC: UITableViewController {
         
         issueItems = []
 
-        remoteGit.getRepoIssues("kvendrik/responsive-images.js") {
-            results in
+        remoteGit.getRepoIssues(repoFullName) {
+            results, err in
             
-            for result in results {
-                let author = result["user"] as! Dictionary<String, AnyObject>
-                self.issueItems.append(IssueItem(
-                    number: result["number"] as! Int,
-                    title: result["title"] as! String,
-                    assignee: result["assignee"] as? String,
-                    createdAt: result["created_at"] as! String,
-                    author: author["login"] as! String,
-                    labels: result["labels"] as! [Dictionary<String, AnyObject>]
-                ))
+            if results!.count < 1 {
+
+                let emptyLabel = UILabel()
+                emptyLabel.textAlignment = NSTextAlignment.Center
+                emptyLabel.text = "No issues here, yeey!"
+                
+                self.tableView.backgroundView = emptyLabel
+                self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+
+            } else {
+            
+                for result in results! {
+                    let author = result["user"] as! Dictionary<String, AnyObject>
+                    self.issueItems.append(IssueItem(
+                        number: result["number"] as! Int,
+                        title: result["title"] as! String,
+                        assignee: result["assignee"] as? String,
+                        createdAt: result["created_at"] as! String,
+                        author: author["login"] as! String,
+                        labels: result["labels"] as! [Dictionary<String, AnyObject>]
+                    ))
+                }
+            
+                self.tableView.reloadData()
             }
-            
-            self.tableView.reloadData()
+
             onDataLoaded()
         }
     }

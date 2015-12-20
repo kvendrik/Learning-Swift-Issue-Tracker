@@ -23,6 +23,7 @@ class RepoTableVC: UITableViewController {
     var refreshRC:UIRefreshControl!
 
     var userRepos = [String: [RepoItem]]()
+    var tappedCellDetails = [String: Int]()
     
     let remoteGit = RemoteGit()
     
@@ -57,15 +58,33 @@ class RepoTableVC: UITableViewController {
         }
     }
     
+    func showMsgLabel(msgText: String){
+        let emptyLabel = UILabel()
+        emptyLabel.textAlignment = NSTextAlignment.Center
+        emptyLabel.text = msgText
+        
+        self.tableView.backgroundView = emptyLabel
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+    }
+    
+    func showErrorLabel(){
+        showMsgLabel("Whoops looks like something went wrong, try again later")
+    }
+    
     func getData(onDataLoaded: () -> Void){
         self.getUserRepos("kvendrik", isOrg: false) {
             self.tableView.reloadData()
         }
 
         remoteGit.getOrgs("kvendrik") {
-            orgs in
+            orgs, err in
             
-            for org in orgs {
+            if err != nil {
+                self.showErrorLabel()
+                return
+            }
+            
+            for org in orgs! {
                 self.getUserRepos(org["login"] as! String, isOrg: true) {
                     self.tableView.reloadData()
                 }
@@ -83,9 +102,14 @@ class RepoTableVC: UITableViewController {
         let repos = self.userRepos[userName]
 
         remoteGit.getRepos(userName, isOrg: isOrg) {
-            results in
+            results, err in
             
-            for result in results {
+            if err != nil {
+                self.showErrorLabel()
+                return
+            }
+            
+            for result in results! {
                 let owner = result["owner"] as! Dictionary<String, AnyObject>
                 let fullName = result["full_name"] as! String
 
@@ -146,12 +170,20 @@ class RepoTableVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tappedCellDetails = [
+            "row": indexPath.row,
+            "section": indexPath.section
+        ]
         performSegueWithIdentifier("RepoIssuesSegue", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "RepoIssuesSegue" {
-            //IssueTableVC()
+            let keyName = Array(userRepos.keys)[tappedCellDetails["section"]!]
+            let repoItem = userRepos[keyName]![tappedCellDetails["row"]!]
+            
+            let svc = segue.destinationViewController as! IssueTableVC;
+            svc.repoFullName = repoItem.fullName
         }
     }
     
