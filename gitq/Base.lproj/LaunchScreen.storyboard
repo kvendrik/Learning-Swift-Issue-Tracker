@@ -16,8 +16,29 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4du-lL-kMx">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="1mL-Q2-ctf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="3L9-K6-aOF"/>
+                                    <constraint firstAttribute="width" constant="240" id="j4o-fy-AnK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="o8T-vL-ATY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3L9-K6-aOF"/>
+                                        <exclude reference="o8T-vL-ATY"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.1764705882352941" green="0.18823529411764706" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4du-lL-kMx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7pi-G5-MYz"/>
+                            <constraint firstItem="4du-lL-kMx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IcN-Hk-93x"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,4 +46,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="1440" height="1440"/>
+    </resources>
 </document>

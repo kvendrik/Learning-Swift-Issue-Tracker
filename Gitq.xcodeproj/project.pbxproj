@@ -17,6 +17,7 @@
 		67969E9A1C25E3CB00B31C46 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969E991C25E3CB00B31C46 /* IssueTableViewCell.swift */; };
 		67969E9C1C25F02F00B31C46 /* RemoteGitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969E9B1C25F02F00B31C46 /* RemoteGitModel.swift */; };
 		67B1AB571C272508006B4E72 /* IssueDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1AB561C272508006B4E72 /* IssueDetailVC.swift */; };
+		67B1AB591C275163006B4E72 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B1AB581C275163006B4E72 /* Default-568h@2x.png */; };
 		67D49BA11C26B9E400ACDD58 /* RepoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D49BA01C26B9E400ACDD58 /* RepoTableVC.swift */; };
 		67D49BA31C26BA9500ACDD58 /* RepoItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D49BA21C26BA9500ACDD58 /* RepoItemModel.swift */; };
 		67D49BA51C26D1AC00ACDD58 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D49BA41C26D1AC00ACDD58 /* RepoTableViewCell.swift */; };
@@ -35,6 +36,7 @@
 		67969E991C25E3CB00B31C46 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueTableViewCell.swift; path = ../IssueTableViewCell.swift; sourceTree = "<group>"; };
 		67969E9B1C25F02F00B31C46 /* RemoteGitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteGitModel.swift; sourceTree = "<group>"; };
 		67B1AB561C272508006B4E72 /* IssueDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueDetailVC.swift; sourceTree = "<group>"; };
+		67B1AB581C275163006B4E72 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		67D49BA01C26B9E400ACDD58 /* RepoTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableVC.swift; sourceTree = "<group>"; };
 		67D49BA21C26BA9500ACDD58 /* RepoItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoItemModel.swift; sourceTree = "<group>"; };
 		67D49BA41C26D1AC00ACDD58 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		67969E771C25CBE500B31C46 = {
 			isa = PBXGroup;
 			children = (
+				67B1AB581C275163006B4E72 /* Default-568h@2x.png */,
 				67969E821C25CBE500B31C46 /* gitq */,
 				67969E811C25CBE500B31C46 /* Products */,
 				706008697FD28FA0E360E2A3 /* Pods */,
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67969E8E1C25CBE500B31C46 /* LaunchScreen.storyboard in Resources */,
+				67B1AB591C275163006B4E72 /* Default-568h@2x.png in Resources */,
 				67969E8B1C25CBE500B31C46 /* Assets.xcassets in Resources */,
 				67969E891C25CBE500B31C46 /* Main.storyboard in Resources */,
 			);
@@ -351,7 +355,7 @@
 			baseConfigurationReference = EA4749D4841A8B92B4FE6002 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "issue-tracker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/gitq/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duxilio.gitq;
@@ -364,7 +368,7 @@
 			baseConfigurationReference = D99820DC0ECC62647CEBE7C6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "issue-tracker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/gitq/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duxilio.gitq;
