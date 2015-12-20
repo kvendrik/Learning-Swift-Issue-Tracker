@@ -16,6 +16,7 @@ class IssueTableVC: UITableViewController {
     var issueItems: [IssueItem] = []
     
     var repoFullName: String = ""
+    var tappedCellIdx: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,9 +76,13 @@ class IssueTableVC: UITableViewController {
                     self.issueItems.append(IssueItem(
                         number: result["number"] as! Int,
                         title: result["title"] as! String,
+                        state: result["state"] as! String,
                         assignee: result["assignee"] as? String,
                         createdAt: result["created_at"] as! String,
-                        author: author["login"] as! String,
+                        author: [
+                            "login": author["login"] as! String,
+                            "avatarUrl": author["avatar_url"] as! String
+                        ],
                         labels: result["labels"] as! [Dictionary<String, AnyObject>]
                     ))
                 }
@@ -115,10 +120,24 @@ class IssueTableVC: UITableViewController {
         cell.titleLabel.text = issueItem.title
         cell.assigneeLabel.text = issueItem.assignee
         cell.dateLabel.text = "opened on \(issueItem.getPrettyCreatedAtStr())"
-        cell.authorLabel.text = "by \(issueItem.author)"
+        cell.authorLabel.text = "by \(issueItem.author["login"]!)"
         cell.labelsLabel.text = issueItem.getLabelsStr()
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tappedCellIdx = indexPath.row
+        performSegueWithIdentifier("IssueDetailSegue", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "IssueDetailSegue" {
+            let issueItem = issueItems[tappedCellIdx]
+
+            let svc = segue.destinationViewController as! IssueDetailVC
+            svc.issueItem = issueItem
+        }
     }
 
 }

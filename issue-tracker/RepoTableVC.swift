@@ -182,7 +182,7 @@ class RepoTableVC: UITableViewController {
             let keyName = Array(userRepos.keys)[tappedCellDetails["section"]!]
             let repoItem = userRepos[keyName]![tappedCellDetails["row"]!]
             
-            let svc = segue.destinationViewController as! IssueTableVC;
+            let svc = segue.destinationViewController as! IssueTableVC
             svc.repoFullName = repoItem.fullName
         }
     }

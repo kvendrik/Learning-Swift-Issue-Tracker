@@ -11,9 +11,10 @@ import UIKit
 struct IssueItem {
     let number: Int
     let title: String
+    let state: String
     let assignee: String?
     let createdAt: String
-    let author: String
+    let author: Dictionary<String, String>
     let labels: [Dictionary<String, AnyObject>]
     
     func getLabelsStr() -> String {
@@ -26,6 +27,10 @@ struct IssueItem {
     }
     
     func getPrettyCreatedAtStr() -> String {
+        if(self.createdAt == ""){
+            return ""
+        }
+        
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
