@@ -9,7 +9,7 @@
         <!--Issues-->
         <scene sceneID="vu6-Mw-FKi">
             <objects>
-                <tableViewController id="z6w-SU-okX" customClass="IssueTableVC" customModule="issue_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="z6w-SU-okX" customClass="IssueTableVC" customModule="Gitq" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="28" sectionFooterHeight="28" id="lEh-Dn-MMW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IssueTableViewCell" rowHeight="135" id="G1N-9n-932" customClass="IssueTableViewCell" customModule="issue_tracker" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IssueTableViewCell" rowHeight="135" id="G1N-9n-932" customClass="IssueTableViewCell" customModule="Gitq" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="135"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G1N-9n-932" id="stI-Bv-tsL">
@@ -148,7 +148,7 @@
         <scene sceneID="twl-yH-mUZ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58f-Og-lVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Ivx-qd-lQj" customClass="IssueDetailVC" customModule="issue_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ivx-qd-lQj" customClass="IssueDetailVC" customModule="Gitq" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PXj-SK-cbD"/>
                         <viewControllerLayoutGuide type="bottom" id="JYs-nD-h86"/>
@@ -250,7 +250,7 @@
         <!--Repositories-->
         <scene sceneID="mK5-x5-i8w">
             <objects>
-                <tableViewController id="GxR-QO-PIw" customClass="RepoTableVC" customModule="issue_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GxR-QO-PIw" customClass="RepoTableVC" customModule="Gitq" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6gy-cp-My9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,7 +260,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoTableViewCell" id="4xH-8O-Y2J" customClass="RepoTableViewCell" customModule="issue_tracker" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoTableViewCell" id="4xH-8O-Y2J" customClass="RepoTableViewCell" customModule="Gitq" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4xH-8O-Y2J" id="h97-fs-eVj">
@@ -358,6 +358,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="1hw-As-dQW"/>
-        <segue reference="GY0-pL-Abf"/>
+        <segue reference="6wW-zG-Hin"/>
     </inferredMetricsTieBreakers>
 </document>

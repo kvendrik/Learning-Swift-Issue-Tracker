@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "67969E7F1C25CBE500B31C46"
-               BuildableName = "issue-tracker.app"
-               BlueprintName = "issue-tracker"
-               ReferencedContainer = "container:issue-tracker.xcodeproj">
+               BuildableName = "Gitq.app"
+               BlueprintName = "Gitq"
+               ReferencedContainer = "container:Gitq.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67969E7F1C25CBE500B31C46"
-            BuildableName = "issue-tracker.app"
-            BlueprintName = "issue-tracker"
-            ReferencedContainer = "container:issue-tracker.xcodeproj">
+            BuildableName = "Gitq.app"
+            BlueprintName = "Gitq"
+            ReferencedContainer = "container:Gitq.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67969E7F1C25CBE500B31C46"
-            BuildableName = "issue-tracker.app"
-            BlueprintName = "issue-tracker"
-            ReferencedContainer = "container:issue-tracker.xcodeproj">
+            BuildableName = "Gitq.app"
+            BlueprintName = "Gitq"
+            ReferencedContainer = "container:Gitq.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67969E7F1C25CBE500B31C46"
-            BuildableName = "issue-tracker.app"
-            BlueprintName = "issue-tracker"
-            ReferencedContainer = "container:issue-tracker.xcodeproj">
+            BuildableName = "Gitq.app"
+            BlueprintName = "Gitq"
+            ReferencedContainer = "container:Gitq.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

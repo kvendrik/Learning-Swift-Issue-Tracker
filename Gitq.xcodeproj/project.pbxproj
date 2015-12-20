@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		5C2DC61CD5C03AE5C03290AF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		67969E801C25CBE500B31C46 /* issue-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "issue-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67969E801C25CBE500B31C46 /* Gitq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67969E831C25CBE500B31C46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67969E881C25CBE500B31C46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67969E8A1C25CBE500B31C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		67969E771C25CBE500B31C46 = {
 			isa = PBXGroup;
 			children = (
-				67969E821C25CBE500B31C46 /* issue-tracker */,
+				67969E821C25CBE500B31C46 /* gitq */,
 				67969E811C25CBE500B31C46 /* Products */,
 				706008697FD28FA0E360E2A3 /* Pods */,
 				F0A320ADA6D203A212FB3C4C /* Frameworks */,
@@ -67,12 +67,12 @@
 		67969E811C25CBE500B31C46 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67969E801C25CBE500B31C46 /* issue-tracker.app */,
+				67969E801C25CBE500B31C46 /* Gitq.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		67969E821C25CBE500B31C46 /* issue-tracker */ = {
+		67969E821C25CBE500B31C46 /* gitq */ = {
 			isa = PBXGroup;
 			children = (
 				67969E971C25D2F700B31C46 /* IssueItemModel.swift */,
@@ -89,7 +89,7 @@
 				67969E8C1C25CBE500B31C46 /* LaunchScreen.storyboard */,
 				67969E8F1C25CBE500B31C46 /* Info.plist */,
 			);
-			path = "issue-tracker";
+			path = gitq;
 			sourceTree = "<group>";
 		};
 		706008697FD28FA0E360E2A3 /* Pods */ = {
@@ -112,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		67969E7F1C25CBE500B31C46 /* issue-tracker */ = {
+		67969E7F1C25CBE500B31C46 /* Gitq */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67969E921C25CBE500B31C46 /* Build configuration list for PBXNativeTarget "issue-tracker" */;
+			buildConfigurationList = 67969E921C25CBE500B31C46 /* Build configuration list for PBXNativeTarget "Gitq" */;
 			buildPhases = (
 				F67E1DFFCD5AEF9D11B5A768 /* Check Pods Manifest.lock */,
 				67969E7C1C25CBE500B31C46 /* Sources */,
@@ -127,9 +127,9 @@
 			);
 			dependencies = (
 			);
-			name = "issue-tracker";
+			name = Gitq;
 			productName = "issue-tracker";
-			productReference = 67969E801C25CBE500B31C46 /* issue-tracker.app */;
+			productReference = 67969E801C25CBE500B31C46 /* Gitq.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,7 +147,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 67969E7B1C25CBE500B31C46 /* Build configuration list for PBXProject "issue-tracker" */;
+			buildConfigurationList = 67969E7B1C25CBE500B31C46 /* Build configuration list for PBXProject "Gitq" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -160,7 +160,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				67969E7F1C25CBE500B31C46 /* issue-tracker */,
+				67969E7F1C25CBE500B31C46 /* Gitq */,
 			);
 		};
 /* End PBXProject section */
@@ -354,8 +354,8 @@
 				INFOPLIST_FILE = "issue-tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.duxilio.issue-tracker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.duxilio.gitq;
+				PRODUCT_NAME = Gitq;
 			};
 			name = Debug;
 		};
@@ -367,15 +367,15 @@
 				INFOPLIST_FILE = "issue-tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.duxilio.issue-tracker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.duxilio.gitq;
+				PRODUCT_NAME = Gitq;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67969E7B1C25CBE500B31C46 /* Build configuration list for PBXProject "issue-tracker" */ = {
+		67969E7B1C25CBE500B31C46 /* Build configuration list for PBXProject "Gitq" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67969E901C25CBE500B31C46 /* Debug */,
@@ -384,7 +384,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67969E921C25CBE500B31C46 /* Build configuration list for PBXNativeTarget "issue-tracker" */ = {
+		67969E921C25CBE500B31C46 /* Build configuration list for PBXNativeTarget "Gitq" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67969E931C25CBE500B31C46 /* Debug */,
